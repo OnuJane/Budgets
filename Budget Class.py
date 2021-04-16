@@ -82,13 +82,34 @@ class Budget:
 
 
     def withdrawal(self):
-        print(budgetDict)
-        print('Where do you want to withdraw from?')
-        print('1.Food')
-        print('2.Cloth')
-        print('3.entertainment')
-        print ('4.exit')
-        Option = int(input())
+        Option = int(input('How much do you want to withdraw?  \n'))
+        withdraw = budgetDict[]['amount'] - Option
+        if Option > budgetDict[]['amount']:
+            print('Insufficient balance, your request cannot be processed')
+            exit()
+        else:
+            withdraw = budgetDict[]['amount'] - Option
+            print('Withdrawal successful')
+            print('Your new balance is: ', withdraw)
+            print('Thank you forusing our services')
+            exit()
 
+
+    def Transfer(self):
+        Option = int(input('How much do you want to transfer?  \n'))
+        Category = int(input('Where do you want to transfer to? 1.    \n'))
+        transferamount = budgetDict[]['amount'] - Option
+        if Option > budgetDict[]['amount']:
+            print('Insufficient balance, your request cannot be processed')
+            exit()
+        else:
+            withdraw = budgetDict[]['amount'] - Option
+            print('Withdrawal successful')
+            print('Your new balance is: ', withdraw)
+            print('Thank you for using our services')
+            exit()
+
+        
+        
                 
                  
